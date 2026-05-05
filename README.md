@@ -67,5 +67,11 @@ Some variables were transformed into logarithmic form to interpret results in te
 - IV estimation confirms the results after correcting for endogeneity (Wu-Hausman test significant)
 - Best performing model: Financial Inclusion Index (R² = 0.86, F-stat = 52.28***)
 
+### Correlation matrix
+![Correlation matrix](images/correlation.png)
+
+### OLS results
+![OLS results](images/ols.png)
+
 ## Conclusion
 Our models provide insights into the key determinants of financial inclusion in developing countries, with digital finance playing a significant role. By improving access to digital financial services and infrastructure (e.g., electricity), governments can promote greater financial inclusion.
