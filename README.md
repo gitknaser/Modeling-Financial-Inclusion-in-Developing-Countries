@@ -30,11 +30,9 @@ This project analyzes the relationship between digital finance and financial inc
 - **FI_Index (Financial Inclusion Index)**: An index (0-1) constructed following the method of Oumarou and Celestin (2021).
 
 ## Data Preprocessing
-- **Transformation of Variables**: We converted variables into appropriate formats (e.g., factors, numeric, date objects) to prepare them for analysis.
-- **Handling Missing and Outlier Values**:
-  - Missing values in some variables like `sesso` (gender) were replaced with "Unknown".
-  - Outliers in variables like birth year (`data di nascita`) were handled.
-- **Merging Data**: After preprocessing, we merged the datasets and encoded binary variables to create a clean dataset (`base_esti`) for our estimations.
+- Filtering: started with 152 developing countries, reduced to 77 after removing observations with missing values
+- Variable transformation: log transformations applied to skewed variables for elasticity interpretation
+- Index construction: Financial Inclusion Index built following Oumarou & Celestin (2021)
 
 ## Model Estimation
 
@@ -62,6 +60,12 @@ Some variables were transformed into logarithmic form to interpret results in te
 - **log_CPI**: Log of consumer price index.
 - **log_urban_pop**: Log of urban population.
 - **log_pop_density**: Log of population density.
+
+## Key Results
+- Digital finance is significant at the 1% level across all four models
+- R² = 0.86 on the Financial Inclusion Index model (OLS)
+- IV estimation confirms the results after correcting for endogeneity (Wu-Hausman test significant)
+- Best performing model: Financial Inclusion Index (R² = 0.86, F-stat = 52.28***)
 
 ## Conclusion
 Our models provide insights into the key determinants of financial inclusion in developing countries, with digital finance playing a significant role. By improving access to digital financial services and infrastructure (e.g., electricity), governments can promote greater financial inclusion.
